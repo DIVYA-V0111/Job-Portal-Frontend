@@ -1,70 +1,239 @@
-# Getting Started with Create React App
+# Job-Portal-Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-18-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38bdf8)
+![Axios](https://img.shields.io/badge/Axios-Latest-purple)
+![ReactRouter](https://img.shields.io/badge/ReactRouter-6-red)
 
-## Available Scripts
+A modern, responsive Job Portal frontend built with React.js and Tailwind CSS.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Technology | Purpose |
+|------------|---------|
+| React.js 18 | Frontend Framework |
+| Tailwind CSS | Styling |
+| Axios | API Calls |
+| React Router DOM | Navigation |
+| Context API | Theme Management |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Candidate
+- Register and Login
+- Forgot Password with OTP (3 step flow)
+- View all jobs with pagination
+- Apply for jobs with cover letter
+- Save and unsave jobs
+- View my applications with status tracking
+- Upload, download and delete resume (PDF)
+- View recommended jobs based on skills
+- Update profile and skills
+- Change password
+- Dark and Light theme toggle
 
-### `npm run build`
+### Recruiter
+- Register and Login
+- Post new jobs
+- View all posted jobs
+- View applications for each job
+- Update application status
+- Delete jobs
+- Email notifications on status change
+- Dark and Light theme toggle
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
+job-portal-frontend/
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── pages/
+│   │   ├── Login.js
+│   │   ├── Register.js
+│   │   ├── ForgotPassword.js
+│   │   ├── CandidateDashboard.js
+│   │   └── RecruiterDashboard.js
+│   ├── components/
+│   │   ├── JobList.js
+│   │   ├── MyApplications.js
+│   │   ├── SavedJobs.js
+│   │   ├── RecommendedJobs.js
+│   │   ├── ResumeUpload.js
+│   │   ├── Profile.js
+│   │   ├── MyJobs.js
+│   │   ├── PostJob.js
+│   │   └── ThemeToggle.js
+│   ├── services/
+│   │   └── api.js
+│   ├── context/
+│   │   └── ThemeContext.js
+│   ├── App.js
+│   ├── index.js
+│   └── index.css
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Pages and Routes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Route | Page | Access |
+|-------|------|--------|
+| / | Login | Public |
+| /login | Login | Public |
+| /register | Register | Public |
+| /forgot-password | Forgot Password | Public |
+| /candidate-dashboard | Candidate Dashboard | CANDIDATE only |
+| /recruiter-dashboard | Recruiter Dashboard | RECRUITER only |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Application Status Flow
+PENDING → SCREENING → SHORTLISTED → INTERVIEWING → SELECTED
+→ REJECTED
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## API Services
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All API calls are defined in src/services/api.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Auth APIs
+loginUser(data)
+registerUser(data)
+forgotPassword(email)
+verifyOtp(email, otp)
+resetPassword(email, otp, newPassword)
 
-### Code Splitting
+### Job APIs
+getAllJobs(page, size)
+getJobById(id)
+createJob(data)
+updateJob(id, data)
+deleteJob(id)
+searchJobs(keyword)
+getMyJobs()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Application APIs
+applyForJob(jobId, coverLetter)
+getMyApplications()
+getJobApplications(jobId)
+updateApplicationStatus(applicationId, status)
 
-### Analyzing the Bundle Size
+### Resume APIs
+uploadResume(formData)
+downloadResume()
+deleteResume()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Profile APIs
+getProfile()
+updateProfile(data)
+changePassword(oldPassword, newPassword)
 
-### Making a Progressive Web App
+### Saved Job APIs
+saveJob(jobId)
+unsaveJob(jobId)
+getSavedJobs()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Recommended Job APIs
+getRecommendedJobs()
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Setup Instructions
 
-### Deployment
+### Prerequisites
+Node.js v18+
+npm v9+
+Backend running at http://localhost:8080
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Steps
 
-### `npm run build` fails to minify
+1. Clone the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/DIVYA-V0111/Job-Portal-Frontend.git
+```
+
+2. Go into project folder
+
+```bash
+cd job-portal-frontend
+```
+
+3. Install dependencies
+```bash
+npm install
+```
+
+4. Update API URL in `src/services/api.js`
+
+```js
+const API_URL = 'http://localhost:8080/api';
+```;
+
+5. Start the application
+```bash
+npm start
+```
+
+6. Open browser at
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Color Theme
+
+### Candidate Dashboard
+Sidebar  → White (light mode) / Dark gray (dark mode)
+Header   → Cyan to Blue gradient
+Active   → Blue to Purple gradient
+
+### Recruiter Dashboard
+Sidebar  → White (light mode) / Dark gray (dark mode)
+Header   → Dark Teal to Teal gradient
+Active   → Teal gradient
+
+---
+
+## Dark and Light Theme
+
+- Click the moon icon in the header to switch to dark mode
+- Click the sun icon to switch back to light mode
+- Theme preference is saved in localStorage
+- Automatically applied on next visit
+
+---
+
+## Backend Repository
+https://github.com/DIVYA-V0111/Job-Portal-Application
+
+Make sure the backend is running before starting the frontend.
+
+---
+
+## Developer
+Name   : Divya Venkatesh
+Email  : divyavenkatesh91080@gmail.com
+GitHub : github.com/DIVYA-V0111
+
+---
+
+## License
+
+This project is built for educational purposes.
