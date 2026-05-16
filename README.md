@@ -49,7 +49,7 @@ A modern, responsive Job Portal frontend built with React.js and Tailwind CSS.
 ---
 
 ## Project Structure
-job-portal-frontend/
+Job-Portal-Frontend/
 ├── public/
 │   ├── index.html
 │   ├── manifest.json
@@ -182,7 +182,7 @@ npm install
 
 ```js
 const API_URL = 'http://localhost:8080/api';
-```;
+```
 
 5. Start the application
 ```bash
@@ -227,10 +227,101 @@ Make sure the backend is running before starting the frontend.
 
 ---
 
+## Screenshots
+
+### Register Page
+
+<img width="100%" src="screenshots/register.png">
+
+---
+
+### Login Page
+
+<img width="100%" src="screenshots/login.png">
+
+---
+
+### Candidate Dashboard
+
+<img width="100%" src="screenshots/candidate-dashboard.png">
+
+---
+
+### Recommended Jobs
+
+<img width="100%" src="screenshots/recommended-jobs.png">
+
+---
+
+### My Applications
+
+<img width="100%" src="screenshots/my-applications.png">
+
+---
+
+### Saved Jobs
+
+<img width="100%" src="screenshots/saved-jobs.png">
+
+---
+
+### Profile Page
+
+<img width="100%" src="screenshots/profile-1.png">
+
+---
+
+### Profile Update
+
+<img width="100%" src="screenshots/profile-2.png">
+
+---
+
+### Candidate Dark Mode
+
+<img width="100%" src="screenshots/dark-mode(candidate).png">
+
+---
+
+### Recruiter Dashboard
+
+<img width="100%" src="screenshots/recruiter-dashboard.png">
+
+---
+
+### My Jobs
+
+<img width="100%" src="screenshots/my-jobs.png">
+
+---
+
+### Post Jobs
+
+<img width="100%" src="screenshots/post-jobs-1.png">
+
+---
+
+### Job Description Form
+
+<img width="100%" src="screenshots/post-jobs-2.png">
+
+---
+
+### Recruiter Dark Mode
+
+<img width="100%" src="screenshots/dark mode(recruiter).png">
+
+---
+
+### Resume Upload
+
+<img width="100%" src="screenshots/my resume(upload).png">
+
+
 ## Developer
-Name   : Divya Venkatesh
-Email  : divyavenkatesh91080@gmail.com
-GitHub : github.com/DIVYA-V0111
+
+- Divya Venkatesh
+- GitHub: https://github.com/DIVYA-V0111
 
 ---
 

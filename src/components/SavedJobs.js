@@ -136,14 +136,15 @@ function SavedJobs() {
     Apply Now
   </button>
   <button
-    onClick={() => handleUnsave(saved.job?.id)}
-    className="bg-gradient-to-r from-orange-400 to-red-500
-               hover:from-orange-500 hover:to-red-600
-               active:from-orange-600 active:to-red-700
-               text-white px-5 py-2 rounded-lg text-sm font-medium
-               transition hover:shadow-lg hover:scale-105 duration-200">
-    Remove
-  </button>
+  onClick={() => handleUnsave(saved.job?.id)}
+  className="bg-gradient-to-r from-rose-500 to-red-500
+             hover:from-rose-600 hover:to-red-600
+             active:from-rose-700 active:to-red-700
+             text-white px-5 py-2 rounded-lg text-sm font-medium
+             transition-all duration-200
+             hover:shadow-lg hover:scale-105">
+  Remove
+</button>
 </div>
           </div>
         ))}

@@ -83,7 +83,10 @@ function ResumeUpload() {
           />
           <label
             htmlFor="resume-input"
-            className="bg-indigo-50 hover:bg-indigo-100 text-indigo-600
+            className="bg-white hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600
+text-black dark:text-white
+border border-gray-300 dark:border-gray-600
+shadow-sm
                        px-6 py-2 rounded-lg text-sm font-medium
                        cursor-pointer transition">
             Choose File
@@ -121,9 +124,9 @@ function ResumeUpload() {
 </button>
 <button
   onClick={handleDelete}
-  className="bg-gradient-to-r from-orange-400 to-red-500
-             hover:from-orange-500 hover:to-red-600
-             active:from-orange-600 active:to-red-700
+  className="bg-gradient-to-r from-rose-500 to-red-600
+             hover:from-rose-600 hover:to-red-700
+             active:from-rose-700 active:to-red-800
              text-white px-6 py-3 rounded-xl font-medium
              transition hover:shadow-lg hover:scale-105 duration-200
              flex items-center gap-2">

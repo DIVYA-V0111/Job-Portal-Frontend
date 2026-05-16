@@ -218,9 +218,9 @@ function Profile() {
             </div>
             <button
   type="submit"
-  className="bg-gradient-to-r from-orange-400 to-red-500
-             hover:from-orange-500 hover:to-red-600
-             active:from-orange-600 active:to-red-700
+  className="bg-gradient-to-r from-rose-400 to-red-500
+             hover:from-rose-500 hover:to-red-600
+             active:from-rose-600 active:to-red-700
              text-white px-6 py-3 rounded-xl font-medium
              transition hover:shadow-lg hover:scale-105 duration-200">
   Change Password

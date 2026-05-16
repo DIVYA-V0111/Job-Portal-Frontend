@@ -109,14 +109,16 @@ function RecommendedJobs() {
     {job.location}
   </span>
 
-  <span className="flex items-center gap-1">
+ <span className="flex items-center gap-1">
     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-indigo-400"
-         fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round"
-            d="M6 3h12M6 8h12M6 13l8 8M6 8a4 4 0 000 8"/>
-    </svg>
+     viewBox="0 0 24 24" fill="currentColor">
+  <path d="M13.66 7H15a1 1 0 000-2H9a1 1 0 000 2h1.07A3 3 0 0112.83 9H9a1 1 0 000
+           2h3.66a3 3 0 01-2.59 1.5H9a1 1 0 00-.7 1.71l4.5 4.5a1 1 0 001.42-1.42
+           L11.08 14A5 5 0 0015 11h.07a1 1 0 00-.07-2H15a1 1 0 000-2h-1.34z"/>
+</svg>
     {job.salary}
   </span>
+    
 
   <span className="flex items-center gap-1">
     <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-indigo-400"
