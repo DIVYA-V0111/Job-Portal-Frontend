@@ -223,8 +223,6 @@ Active   → Teal gradient
 ## Backend Repository
 https://github.com/DIVYA-V0111/Job-Portal-Application
 
-Make sure the backend is running before starting the frontend.
-
 ---
 
 ## Screenshots
