@@ -221,7 +221,7 @@ Active   → Teal gradient
 ---
 
 ## Backend Repository
-https://github.com/DIVYA-V0111/Job-Portal-Application
+https://github.com/DIVYA-V0111/Job-Portal-Backend
 
 ---
 
