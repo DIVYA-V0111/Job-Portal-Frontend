@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api';
+const API_URL = 'https://job-portal-backend-rb2i.onrender.com/api';
 
 // Add token to every request automatically
 axios.interceptors.request.use(
