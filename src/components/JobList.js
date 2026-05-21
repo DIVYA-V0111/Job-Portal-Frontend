@@ -7,11 +7,10 @@ function JobList() {
   const [totalPages, setTotalPages] = useState(0);
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    fetchJobs();
-  }, [page]);
-
+useEffect(() => {
+  fetchJobs();
+  // eslint-disable-next-line
+}, [page]);
   const fetchJobs = async () => {
     setLoading(true);
     try {
