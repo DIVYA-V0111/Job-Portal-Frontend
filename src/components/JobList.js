@@ -9,7 +9,7 @@ function JobList() {
   const [loading, setLoading] = useState(false);
 useEffect(() => {
   fetchJobs();
-  // eslint-disable-next-line
+  // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [page]);
   const fetchJobs = async () => {
     setLoading(true);
