@@ -83,9 +83,9 @@ function Login() {
             </label>
             <input
               type="password"
-              cclassName="w-full px-4 py-3 rounded-lg border border-gray-300
-           dark:border-gray-600 dark:bg-gray-800 dark:text-white
-           focus:outline-none focus:ring-2 focus:ring-indigo-500
+              className="w-full px-4 py-3 rounded-lg border border-gray-300
+                        dark:border-gray-600 dark:bg-gray-800 dark:text-white
+        focus:outline-none focus:ring-2 focus:ring-indigo-500
            focus:border-transparent transition"
               placeholder="Enter your password"
               value={password}
