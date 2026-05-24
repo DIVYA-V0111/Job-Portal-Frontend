@@ -83,14 +83,11 @@ function Login() {
             </label>
 <input
   type="password"
-  autoComplete="current-password"
-  className="w-full px-4 py-3 rounded-lg border border-gray-300
-             bg-white text-black
-             dark:border-gray-600 dark:bg-gray-800 dark:text-white
-             focus:outline-none focus:ring-2 focus:ring-indigo-500
-             focus:border-transparent transition"
-  placeholder="Enter your password"
-  value={password}
+  className="w-full px-4 py-3 rounded-lg border border-gray-300 
+                         focus:outline-none focus:ring-2 focus:ring-indigo-500
+                         focus:border-transparent transition"
+              placeholder="Enter your password"
+              value={password}
   onChange={(e) => setPassword(e.target.value)}
   required
 />
