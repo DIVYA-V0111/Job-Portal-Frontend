@@ -142,26 +142,29 @@ function Login() {
             }}>
               Password
             </label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              autoComplete="current-password"
-              required
-              style={{
-                display: 'block',
-                width: '100%',
-                padding: '12px 16px',
-                border: '1px solid #d1d5db',
-                borderRadius: '8px',
-                fontSize: '16px',
-                outline: 'none',
-                boxSizing: 'border-box',
-                color: '#1f2937',
-                background: 'white'
-              }}
-            />
+           <input
+  type="password"
+  placeholder="Enter your password"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  autoComplete="new-password"
+  required
+  style={{
+    display: 'block',
+    width: '100%',
+    padding: '12px 16px',
+    border: '1px solid #d1d5db',
+    borderRadius: '8px',
+    fontSize: '16px',
+    outline: 'none',
+    boxSizing: 'border-box',
+    color: '#1f2937',
+    background: 'white',
+    WebkitAppearance: 'none',
+    MozAppearance: 'none',
+    appearance: 'none'
+  }}
+/>
           </div>
 
           {/* Forgot Password */}
