@@ -81,15 +81,18 @@ function Login() {
     Password
   </label>
 
-  <input
-    type="password"
-    placeholder="Enter your password"
-    value={password}
-    onChange={(e) => setPassword(e.target.value)}
-    required
-    className="w-full border border-gray-300 rounded-lg px-4 py-3
-               focus:outline-none focus:ring-2 focus:ring-indigo-500"
-  />
+ <input
+  type="password"
+  className="w-full px-4 py-3 rounded-lg border border-gray-300
+             dark:border-gray-600 dark:bg-gray-800 dark:text-white
+             focus:outline-none focus:ring-2 focus:ring-indigo-500
+             focus:border-transparent transition"
+  style={{width: '100%', boxSizing: 'border-box'}}
+  placeholder="Enter your password"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  required
+/>
 </div>
 
           <div className="flex justify-end">

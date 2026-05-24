@@ -2,13 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Only apply dark styles when dark class is on html element */
+/* Fix autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #374151 !important;
+  transition: background-color 5000s ease-in-out 0s;
+  width: 100% !important;
+}
+
 .dark input:-webkit-autofill,
 .dark input:-webkit-autofill:hover,
-.dark input:-webkit-autofill:focus {
+.dark input:-webkit-autofill:focus,
+.dark input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 1000px #1f2937 inset !important;
+  box-shadow: 0 0 0px 1000px #1f2937 inset !important;
   -webkit-text-fill-color: white !important;
-  transition: background-color 5000s ease-in-out 0s;
+  width: 100% !important;
 }
 
 .dark input {
@@ -26,11 +39,16 @@
   color: white !important;
 }
 
-/* Label colors */
 .dark label {
   color: white !important;
 }
 
 label {
   color: #374151 !important;
+}
+
+/* Fix input width globally */
+input {
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
