@@ -81,17 +81,19 @@ function Login() {
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Password
             </label>
-            <input
-              type="password"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300
-                        dark:border-gray-600 dark:bg-gray-800 dark:text-white
-        focus:outline-none focus:ring-2 focus:ring-indigo-500
-           focus:border-transparent transition"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+<input
+  type="password"
+  autoComplete="current-password"
+  className="w-full px-4 py-3 rounded-lg border border-gray-300
+             bg-white text-black
+             dark:border-gray-600 dark:bg-gray-800 dark:text-white
+             focus:outline-none focus:ring-2 focus:ring-indigo-500
+             focus:border-transparent transition"
+  placeholder="Enter your password"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  required
+/>
           </div>
 
           <div className="flex justify-end">
