@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { loginUser } from '../services/api';
+import './Login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -34,22 +35,8 @@ function Login() {
   };
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #ebf4ff, #e0e7ff)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '16px'
-    }}>
-      <div style={{
-        background: 'white',
-        borderRadius: '16px',
-        boxShadow: '0 20px 60px rgba(0,0,0,0.1)',
-        width: '100%',
-        maxWidth: '440px',
-        padding: '32px'
-      }}>
+    <div className="login-container">
+      <div className="login-card">
 
         {/* Logo */}
         <div style={{textAlign: 'center', marginBottom: '32px'}}>
@@ -111,23 +98,12 @@ function Login() {
             </label>
             <input
               type="email"
+              className="login-input"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="email"
               required
-              style={{
-                display: 'block',
-                width: '100%',
-                padding: '12px 16px',
-                border: '1px solid #d1d5db',
-                borderRadius: '8px',
-                fontSize: '16px',
-                outline: 'none',
-                boxSizing: 'border-box',
-                color: '#1f2937',
-                background: 'white'
-              }}
             />
           </div>
 
@@ -142,29 +118,15 @@ function Login() {
             }}>
               Password
             </label>
-           <input
-  type="password"
-  placeholder="Enter your password"
-  value={password}
-  onChange={(e) => setPassword(e.target.value)}
-  autoComplete="new-password"
-  required
-  style={{
-    display: 'block',
-    width: '100%',
-    padding: '12px 16px',
-    border: '1px solid #d1d5db',
-    borderRadius: '8px',
-    fontSize: '16px',
-    outline: 'none',
-    boxSizing: 'border-box',
-    color: '#1f2937',
-    background: 'white',
-    WebkitAppearance: 'none',
-    MozAppearance: 'none',
-    appearance: 'none'
-  }}
-/>
+            <input
+              type="password"
+              className="login-input"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="new-password"
+              required
+            />
           </div>
 
           {/* Forgot Password */}
@@ -183,21 +145,11 @@ function Login() {
           {/* Sign In Button */}
           <button
             type="submit"
+            className="login-button"
             disabled={loading}
             style={{
-              display: 'block',
-              width: '100%',
-              padding: '12px',
-              background: loading
-                ? '#9ca3af'
-                : 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '8px',
-              fontSize: '16px',
-              fontWeight: '600',
-              cursor: loading ? 'not-allowed' : 'pointer',
-              boxSizing: 'border-box'
+              opacity: loading ? 0.5 : 1,
+              cursor: loading ? 'not-allowed' : 'pointer'
             }}>
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
