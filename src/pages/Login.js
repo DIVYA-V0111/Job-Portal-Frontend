@@ -34,107 +34,188 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 
-                    flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl
-       w-full max-w-md p-8">
-        
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #ebf4ff, #e0e7ff)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '16px'
+    }}>
+      <div style={{
+        background: 'white',
+        borderRadius: '16px',
+        boxShadow: '0 20px 60px rgba(0,0,0,0.1)',
+        width: '100%',
+        maxWidth: '440px',
+        padding: '32px'
+      }}>
+
         {/* Logo */}
-        <div className="text-center mb-8">
-          <div className="bg-indigo-600 text-white w-16 h-16 rounded-2xl 
-                          flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+        <div style={{textAlign: 'center', marginBottom: '32px'}}>
+          <div style={{
+            background: 'linear-gradient(135deg, #12B3EB, #5460F9)',
+            color: 'white',
+            width: '64px',
+            height: '64px',
+            borderRadius: '16px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0 auto 16px',
+            fontSize: '24px',
+            fontWeight: 'bold'
+          }}>
             JP
           </div>
-         <h1 className="text-2xl font-bold text-gray-800 dark:text-white">
-  Job Portal</h1>
-<p className="text-gray-500 dark:text-gray-400 mt-1">
-  Sign in to your account</p>
+          <h1 style={{
+            fontSize: '24px',
+            fontWeight: 'bold',
+            color: '#1f2937',
+            margin: '0 0 4px'
+          }}>
+            Job Portal
+          </h1>
+          <p style={{color: '#6b7280', margin: 0}}>
+            Sign in to your account
+          </p>
         </div>
 
         {/* Error */}
         {error && (
-          <div className="bg-red-50 text-red-600 px-4 py-3 rounded-lg mb-4 text-sm">
+          <div style={{
+            background: '#fef2f2',
+            color: '#dc2626',
+            padding: '12px 16px',
+            borderRadius: '8px',
+            marginBottom: '16px',
+            fontSize: '14px'
+          }}>
             {error}
           </div>
         )}
 
         {/* Form */}
-        <form onSubmit={handleLogin} className="space-y-4">
-  <div className="w-full">
-    <label className="block text-sm font-medium text-gray-700
-                      dark:text-gray-300 mb-1">
-      Email
-    </label>
-    <input
-      type="email"
-      placeholder="Enter your email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      autoComplete="email"
-      required
-      className="block w-full border border-gray-300 rounded-lg
-                 px-4 py-3 focus:outline-none focus:ring-2
-                 focus:ring-indigo-500 dark:border-gray-600
-                 dark:bg-gray-800 dark:text-white"
-      style={{
-        width: '100%',
-        minWidth: '100%',
-        boxSizing: 'border-box',
-        WebkitAppearance: 'none'
-      }}
-    />
-  </div>
+        <form onSubmit={handleLogin}>
 
-  <div className="w-full">
-    <label className="block text-sm font-medium text-gray-700
-                      dark:text-gray-300 mb-1">
-      Password
-    </label>
-    <input
-      type="password"
-      placeholder="Enter your password"
-      value={password}
-      onChange={(e) => setPassword(e.target.value)}
-      autoComplete="current-password"
-      required
-      className="block w-full border border-gray-300 rounded-lg
-                 px-4 py-3 focus:outline-none focus:ring-2
-                 focus:ring-indigo-500 dark:border-gray-600
-                 dark:bg-gray-800 dark:text-white"
-      style={{
-        width: '100%',
-        minWidth: '100%',
-        boxSizing: 'border-box',
-        WebkitAppearance: 'none'
-      }}
-    />
-  </div>
-          <div className="flex justify-end">
+          {/* Email */}
+          <div style={{marginBottom: '16px'}}>
+            <label style={{
+              display: 'block',
+              fontSize: '14px',
+              fontWeight: '500',
+              color: '#374151',
+              marginBottom: '6px'
+            }}>
+              Email
+            </label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
+              required
+              style={{
+                display: 'block',
+                width: '100%',
+                padding: '12px 16px',
+                border: '1px solid #d1d5db',
+                borderRadius: '8px',
+                fontSize: '16px',
+                outline: 'none',
+                boxSizing: 'border-box',
+                color: '#1f2937',
+                background: 'white'
+              }}
+            />
+          </div>
+
+          {/* Password */}
+          <div style={{marginBottom: '8px'}}>
+            <label style={{
+              display: 'block',
+              fontSize: '14px',
+              fontWeight: '500',
+              color: '#374151',
+              marginBottom: '6px'
+            }}>
+              Password
+            </label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
+              required
+              style={{
+                display: 'block',
+                width: '100%',
+                padding: '12px 16px',
+                border: '1px solid #d1d5db',
+                borderRadius: '8px',
+                fontSize: '16px',
+                outline: 'none',
+                boxSizing: 'border-box',
+                color: '#1f2937',
+                background: 'white'
+              }}
+            />
+          </div>
+
+          {/* Forgot Password */}
+          <div style={{textAlign: 'right', marginBottom: '16px'}}>
             <Link
               to="/forgot-password"
-              className="text-sm text-indigo-600 hover:text-indigo-800">
+              style={{
+                fontSize: '14px',
+                color: '#4f46e5',
+                textDecoration: 'none'
+              }}>
               Forgot Password?
             </Link>
           </div>
 
+          {/* Sign In Button */}
           <button
-  type="submit"
-  disabled={loading}
-  className="w-full bg-gradient-to-r from-blue-500 to-purple-600
-             hover:from-blue-600 hover:to-purple-700
-             active:from-blue-700 active:to-purple-800
-             text-white font-semibold py-3 rounded-lg
-             transition hover:shadow-lg hover:scale-105 duration-200
-             disabled:opacity-50 disabled:cursor-not-allowed
-             disabled:hover:scale-100">
-  {loading ? 'Signing in...' : 'Sign In'}
-</button>
+            type="submit"
+            disabled={loading}
+            style={{
+              display: 'block',
+              width: '100%',
+              padding: '12px',
+              background: loading
+                ? '#9ca3af'
+                : 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '8px',
+              fontSize: '16px',
+              fontWeight: '600',
+              cursor: loading ? 'not-allowed' : 'pointer',
+              boxSizing: 'border-box'
+            }}>
+            {loading ? 'Signing in...' : 'Sign In'}
+          </button>
         </form>
 
-        {/* Register link */}
-        <p className="text-center text-gray-500 text-sm mt-6">
+        {/* Register Link */}
+        <p style={{
+          textAlign: 'center',
+          color: '#6b7280',
+          fontSize: '14px',
+          marginTop: '24px',
+          marginBottom: 0
+        }}>
           Don't have an account?{' '}
-          <Link to="/register" className="text-indigo-600 font-semibold hover:underline">
+          <Link
+            to="/register"
+            style={{
+              color: '#4f46e5',
+              fontWeight: '600',
+              textDecoration: 'none'
+            }}>
             Register here
           </Link>
         </p>
