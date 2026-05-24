@@ -61,38 +61,36 @@ function Login() {
         {/* Form */}
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700
-                  dark:text-gray-300 mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 
-                         focus:outline-none focus:ring-2 focus:ring-indigo-500
-                         focus:border-transparent transition"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
+  <label className="block text-sm font-medium text-gray-700 mb-1">
+    Email
+  </label>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Password
-            </label>
-<input
-  type="password"
-  autoComplete="new-password"
-  style={{ width: "100%", padding: "12px", boxSizing: "border-box" }}
-  className="rounded-lg border border-gray-300
-             focus:outline-none focus:ring-2 focus:ring-indigo-500"
-  placeholder="Enter your password"
-  value={password}
-  onChange={(e) => setPassword(e.target.value)}
-  required
-/>
-          </div>
+  <input
+    type="email"
+    placeholder="Enter your email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    required
+    className="w-full border border-gray-300 rounded-lg px-4 py-3
+               focus:outline-none focus:ring-2 focus:ring-indigo-500"
+  />
+</div>
+
+<div>
+  <label className="block text-sm font-medium text-gray-700 mb-1">
+    Password
+  </label>
+
+  <input
+    type="password"
+    placeholder="Enter your password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    required
+    className="w-full border border-gray-300 rounded-lg px-4 py-3
+               focus:outline-none focus:ring-2 focus:ring-indigo-500"
+  />
+</div>
 
           <div className="flex justify-end">
             <Link
