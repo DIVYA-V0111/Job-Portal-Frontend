@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fix autofill styling */
+/* Fix Chrome autofill width issue */
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
+
+/* Fix Chrome autofill background */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -10,10 +21,12 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 1000px white inset !important;
   box-shadow: 0 0 0px 1000px white inset !important;
   -webkit-text-fill-color: #374151 !important;
-  transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s !important;
   width: 100% !important;
+  box-sizing: border-box !important;
 }
 
+/* Dark mode autofill */
 .dark input:-webkit-autofill,
 .dark input:-webkit-autofill:hover,
 .dark input:-webkit-autofill:focus,
@@ -24,9 +37,11 @@ input:-webkit-autofill:active {
   width: 100% !important;
 }
 
+/* Dark mode inputs */
 .dark input {
   background-color: #1f2937 !important;
   color: white !important;
+  width: 100% !important;
 }
 
 .dark textarea {
@@ -39,16 +54,11 @@ input:-webkit-autofill:active {
   color: white !important;
 }
 
+/* Label colors */
 .dark label {
   color: white !important;
 }
 
 label {
   color: #374151 !important;
-}
-
-/* Fix input width globally */
-input {
-  width: 100% !important;
-  box-sizing: border-box !important;
 }

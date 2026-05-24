@@ -60,41 +60,55 @@ function Login() {
 
         {/* Form */}
         <form onSubmit={handleLogin} className="space-y-4">
-          <div>
-  <label className="block text-sm font-medium text-gray-700 mb-1">
-    Email
-  </label>
+  <div className="w-full">
+    <label className="block text-sm font-medium text-gray-700
+                      dark:text-gray-300 mb-1">
+      Email
+    </label>
+    <input
+      type="email"
+      placeholder="Enter your email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      autoComplete="email"
+      required
+      className="block w-full border border-gray-300 rounded-lg
+                 px-4 py-3 focus:outline-none focus:ring-2
+                 focus:ring-indigo-500 dark:border-gray-600
+                 dark:bg-gray-800 dark:text-white"
+      style={{
+        width: '100%',
+        minWidth: '100%',
+        boxSizing: 'border-box',
+        WebkitAppearance: 'none'
+      }}
+    />
+  </div>
 
-  <input
-    type="email"
-    placeholder="Enter your email"
-    value={email}
-    onChange={(e) => setEmail(e.target.value)}
-    required
-    className="w-full border border-gray-300 rounded-lg px-4 py-3
-               focus:outline-none focus:ring-2 focus:ring-indigo-500"
-  />
-</div>
-
-<div>
-  <label className="block text-sm font-medium text-gray-700 mb-1">
-    Password
-  </label>
-
- <input
-  type="password"
-  className="w-full px-4 py-3 rounded-lg border border-gray-300
-             dark:border-gray-600 dark:bg-gray-800 dark:text-white
-             focus:outline-none focus:ring-2 focus:ring-indigo-500
-             focus:border-transparent transition"
-  style={{width: '100%', boxSizing: 'border-box'}}
-  placeholder="Enter your password"
-  value={password}
-  onChange={(e) => setPassword(e.target.value)}
-  required
-/>
-</div>
-
+  <div className="w-full">
+    <label className="block text-sm font-medium text-gray-700
+                      dark:text-gray-300 mb-1">
+      Password
+    </label>
+    <input
+      type="password"
+      placeholder="Enter your password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      autoComplete="current-password"
+      required
+      className="block w-full border border-gray-300 rounded-lg
+                 px-4 py-3 focus:outline-none focus:ring-2
+                 focus:ring-indigo-500 dark:border-gray-600
+                 dark:bg-gray-800 dark:text-white"
+      style={{
+        width: '100%',
+        minWidth: '100%',
+        boxSizing: 'border-box',
+        WebkitAppearance: 'none'
+      }}
+    />
+  </div>
           <div className="flex justify-end">
             <Link
               to="/forgot-password"
